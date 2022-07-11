@@ -75,9 +75,9 @@ WSGI_APPLICATION = 'medicare.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'default': {                                                medmed
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.0.1:1521/orcl',
+        'NAME': '127.0.0.1:1521/xe',
         'USER': 'c##medicare',
         'PASSWORD': 'medicare',
         'TEST': {
