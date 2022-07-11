@@ -19,9 +19,9 @@ class paciente(models.Model):
     nombrePac= models.CharField(max_length=25, verbose_name='Nombre del paciente')
     apellidoPac= models.CharField(max_length=35, verbose_name='Apellido del paciente')
     runPac= models.CharField(max_length=10, verbose_name='Rut del paciente')
-    telefonoPac= models.IntegerField(max_length=9, verbose_name='Teléfono del paciente')
-    correoPac= models.CharField(max_length=20, verbose_name='Correo del paciente')
+    telefonoPac= models.IntegerField(verbose_name='Teléfono del paciente')
+    correoPac= models.CharField(max_length=40, verbose_name='Correo del paciente')
     
     def __str__(self):
-        return self.idPac
+        return self.nombrePac + ' ' + self.apellidoPac
     
