@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'medicare.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.0.1:1521/xe',
+        'NAME': '127.0.0.1:1521/orcl',
         'USER': 'c##medicare',
         'PASSWORD': 'medicare',
         'TEST': {
@@ -85,7 +85,7 @@ DATABASES = {
             'TBLSPACE': 'default_test_tbls',
             'TBLSPACE_TMP': 'default_test_tbls_tmp',
         },
-    }
+    },
 }
 
 
