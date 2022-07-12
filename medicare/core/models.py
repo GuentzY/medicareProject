@@ -25,3 +25,22 @@ class paciente(models.Model):
     def __str__(self):
         return self.nombrePac + ' ' + self.apellidoPac
     
+
+opcion_consutas = [
+    [0, "Agendar"],
+    [1, "Cancelar"],
+    [2, "Reprogramar"]
+]    
+
+
+class Contacto(models.Model):
+    nombre = models.CharField(max_length=50)
+    apellido= models.CharField(max_length=35, verbose_name='Apellido del paciente')
+    correo = models.EmailField()
+    telefonoPac= models.IntegerField(verbose_name='Teléfono del paciente')
+    tipo_consulta= models.IntegerField(choices=opcion_consutas)
+    mensaje= models.TextField()
+    
+    def __str__(self):
+        return self.nombrePac + ' ' + self.apellidoPac
+    
