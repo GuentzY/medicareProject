@@ -88,15 +88,16 @@
             <hr>
   
           <form method="post" action="" id="">
-            {% csrf_token %}
+            
             <div class="form-group">
+              {% csrf_token %}
               {{form | crispy}}
             </div>
   
             <br>
   
             <div class="d-flex justify-content-center">
-              <input type="submit" class="btn btn-primary" id="enviar" vlaue="Enviar">
+              <input type="submit" class="btn btn-primary" id="btnEnviar" value="Enviar">
               &nbsp; &nbsp;
               <input type="reset" class="btn btn-danger" id="impiar" value="Limpiar">
             </div>

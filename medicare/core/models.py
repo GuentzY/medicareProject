@@ -35,12 +35,12 @@ opcion_consutas = [
 
 class Contacto(models.Model):
     nombre = models.CharField(max_length=50)
-    apellido= models.CharField(max_length=35, verbose_name='Apellido del paciente')
+    apellido= models.CharField(max_length=35, verbose_name='Apellido del cliente')
     correo = models.EmailField()
-    telefonoPac= models.IntegerField(verbose_name='Teléfono del paciente')
+    telefonoPac= models.IntegerField(verbose_name='Teléfono del cliente')
     tipo_consulta= models.IntegerField(choices=opcion_consutas)
     mensaje= models.TextField()
     
     def __str__(self):
-        return self.nombrePac + ' ' + self.apellidoPac
+        return self.nombre + ' ' + self.apellido
     

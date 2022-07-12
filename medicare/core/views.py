@@ -1,15 +1,10 @@
 from urllib import request
 from django.shortcuts import render
 from .models import paciente
-from .forms import ContactoForm, pacienteForm, Contacto
+from .forms import ContactoForm, pacienteForm
 
 # Create your views here.
 
-def home(request):
-    data={
-        'form': ContactoForm()
-    }
-    return render(request, 'core/home.html', data)
 
 #formulario paciente
 def form_paciente(request):
@@ -28,7 +23,7 @@ def form_paciente(request):
 
 
 #formulario paciente
-def Contacto(request):
+def home(request):
     data={
         'form': ContactoForm()
     }
@@ -37,7 +32,7 @@ def Contacto(request):
         formulario = ContactoForm(data = request.POST)
         if formulario.is_valid():
             formulario.save()
-            data["mensaje"] = "Registrado."
+            data["mensaje"] = "Enviado"
         else:
             data["form"] = formulario
     return render(request, 'core/home.html', data)
